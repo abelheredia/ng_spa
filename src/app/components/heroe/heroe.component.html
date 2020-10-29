@@ -1,0 +1,32 @@
+<h1>{{ heroe.nombre | uppercase }} <small>({{ heroe.aparicion | date:'y' }})</small> </h1>
+<hr>
+<div class="container portfolio animated fadeIn">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="heading">				
+				<img src="https://image.ibb.co/cbCMvA/logo.png" />
+			</div>
+		</div>	
+	</div>
+	<div class="bio-info">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bio-image">
+							<img [src]="heroe.img" alt="image" height="250"/>
+						</div>			
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="bio-content">
+					<h1>{{ heroe.nombre }}</h1>
+                    <h6 style="text-align: justify;" > {{ heroe.bio }} </h6>
+                    <img *ngIf="heroe.casa=='DC'" height="100" width="100" src="../../../assets/img/dc.jpg" />
+				    <img *ngIf="heroe.casa=='Marvel'" height="100" width="100" src="../../../assets/img/marvel.jpg" />
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
